@@ -1,0 +1,13 @@
+<FindBugsFilter>
+  <!-- カバレッジの問題で、equals及びhashCode未実装 -->
+  <Match>
+    <Class name="please.change.me.statistics.action.RequestInfoAggregateAction$AggregateKey" />
+    <Bug pattern="EQ_COMPARETO_USE_OBJECT_EQUALS" />
+  </Match>
+  <!-- 初期化処理はシングルスレッドであるため問題なし -->
+  <Match>
+    <Class name="please.change.me.messaging.wmq.provider.WmqMessagingProvider" />
+    <Method name="initialize"/>
+    <Bug pattern="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" />
+  </Match>
+</FindBugsFilter>
