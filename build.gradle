@@ -77,7 +77,6 @@ task setupBuild(dependsOn: copyDependency) {
 
 
 test {
-  ignoreFailures = true
 }
 
 wrapper {
