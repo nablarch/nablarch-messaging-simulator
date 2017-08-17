@@ -13,6 +13,7 @@ cache:
 script:
 - git clone -b master https://github.com/nablarch/nablarch-ci-script.git $HOME/build-script/
   && chmod +x $HOME/build-script/travis-ci/*.sh
+- $HOME/build-script/travis-ci/install-ibm-wmq-lib-7.5.sh
 - $HOME/build-script/travis-ci/install-oracle-jdk6.sh
 - $HOME/build-script/travis-ci/nablarch-build-nodeploy.sh
 - $HOME/build-script/travis-ci/upload-test-report.sh
