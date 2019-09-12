@@ -12,6 +12,7 @@ import nablarch.fw.web.HttpRequest;
 import nablarch.fw.web.HttpRequestHandler;
 import nablarch.fw.web.HttpResponse;
 import nablarch.fw.web.HttpServer;
+import nablarch.fw.web.httpserver.HttpServerJetty6;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -26,7 +27,7 @@ import org.junit.Test;
 public class HttpRequesterTest {
 
     private static final int PORT = 7373;
-    private static HttpServer server = new HttpServer();
+    private static HttpServer server = new HttpServerJetty6();
 
     private HttpRequester target;
 
