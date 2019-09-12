@@ -16,7 +16,7 @@
   <config-file file="incoming-http-simulator.config" />
 
   <!-- HTTPメッセージ受信シミュレータのコンポーネント定義 -->
-  <component name="server" class="nablarch.fw.web.HttpServer">
+  <component name="server" class="nablarch.fw.web.httpserver.HttpServerJetty6">
     <property name="handlerQueue" ref="handlerQueue" />
     <property name="port" value="${port}" />
     
