@@ -1,10 +1,5 @@
 # nablarch-messaging-simulator
 
-| master | develop |
-|:-----------|:------------|
-|[![Build Status](https://travis-ci.org/nablarch/nablarch-messaging-simulator.svg?branch=master)](https://travis-ci.org/nablarch/nablarch-messaging-simulator)|[![Build Status](https://travis-ci.org/nablarch/nablarch-messaging-simulator.svg?branch=develop)](https://travis-ci.org/nablarch/nablarch-messaging-simulator)|
-
-
 ## 依存ライブラリ
 
 本モジュールのコンパイルまたはテストには、下記ライブラリを手動でローカルリポジトリへインストールする必要があります。
