@@ -27,6 +27,16 @@
         <junit.additionalArgLine>--add-modules java.xml.bind</junit.additionalArgLine>
       </properties>
     </profile>
+    <profile>
+      <id>java11</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.sun.activation</groupId>
+          <artifactId>javax.activation</artifactId>
+          <version>1.2.0</version>
+        </dependency>
+      </dependencies>
+    </profile>
   </profiles>
 
   <dependencies>
