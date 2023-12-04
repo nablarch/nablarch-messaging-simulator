@@ -121,7 +121,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>copy-script</id>
+            <id>copy-scripts</id>
             <phase>package</phase>
             <goals>
               <goal>copy-resources</goal>
