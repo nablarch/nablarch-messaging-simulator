@@ -48,6 +48,6 @@
     <property name="backoutLimit" value="${backoutLimit}" />
     <property name="defaultResponseTimeout" value="${readTimeout}" />
     <property name="useProductSystemErrorOutput" value="${useProductSystemErrorOutput}" />
-    <property name="defaultTimeToLive" value="-1" />
+    <property name="defaultTimeToLive" value="${timeToLive}" />
   </component>
 </component-configuration>
