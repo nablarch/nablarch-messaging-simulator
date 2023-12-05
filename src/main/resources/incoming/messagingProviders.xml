@@ -32,7 +32,7 @@
     <property name="defaultTimeToLive" value="0" />
   </component>
   -->
-  <!-- IBM MQ 9.3.0を使用するための設定(詳細は、fw_integration_sampleのdocを参照) -->
+  <!-- IBM MQを使用するための設定(詳細は、fw_integration_sampleのdocを参照) -->
   <component name="messagingProvider"
       class="nablarch.integration.messaging.wmq.provider.WmqMessagingProvider">
     <property name="useXa" value="${useXA}" />
