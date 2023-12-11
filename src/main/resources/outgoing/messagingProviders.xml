@@ -33,9 +33,9 @@
     <property name="defaultTimeToLive" value="0" />
   </component>
   -->
-  <!-- Websphere MQ V7.5を使用するための設定(詳細は、fw_integration_sampleのdocを参照) -->
+  <!-- IBM MQを使用するための設定(詳細は、fw_integration_sampleのdocを参照) -->
   <component name="messagingProvider"
-      class="please.change.me.messaging.wmq.provider.WmqMessagingProvider">
+      class="nablarch.integration.messaging.wmq.provider.WmqMessagingProvider">
     <property name="useXa" value="${useXA}" />
     <property name="queueManagerName" value="${queueManagerName}" />
     <property name="receivedQueueName" value="${receiveQueueName}" />
@@ -48,5 +48,6 @@
     <property name="backoutLimit" value="${backoutLimit}" />
     <property name="defaultResponseTimeout" value="${readTimeout}" />
     <property name="useProductSystemErrorOutput" value="${useProductSystemErrorOutput}" />
+    <property name="defaultTimeToLive" value="${timeToLive}" />
   </component>
 </component-configuration>

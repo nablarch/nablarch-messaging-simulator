@@ -8,6 +8,11 @@
   <artifactId>nablarch-messaging-simulator</artifactId>
   <version>5-NEXT-SNAPSHOT</version>
 
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <scm>
     <connection>scm:git:git://github.com/nablarch/${project.artifactId}.git</connection>
     <developerConnection>scm:git:git://github.com/nablarch/${project.artifactId}.git</developerConnection>
@@ -73,33 +78,8 @@
     </dependency>
 
     <dependency>
-      <groupId>com.ibm</groupId>
-      <artifactId>com.ibm.mq</artifactId>
-      <version>7.5</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.ibm</groupId>
-      <artifactId>com.ibm.mq.commonservices</artifactId>
-      <version>7.5</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.ibm</groupId>
-      <artifactId>com.ibm.mq.headers</artifactId>
-      <version>7.5</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.ibm</groupId>
-      <artifactId>com.ibm.mq.jmqi</artifactId>
-      <version>7.5</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.ibm</groupId>
-      <artifactId>com.ibm.mq.pcf</artifactId>
-      <version>7.5</version>
+      <groupId>com.nablarch.integration</groupId>
+      <artifactId>nablarch-wmq-adaptor</artifactId>
     </dependency>
 
     <dependency>
@@ -109,4 +89,67 @@
     </dependency>
 
   </dependencies>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <finalName>nablarch-messaging-simulator</finalName>
+          <outputDirectory>${project.build.directory}/build</outputDirectory>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/build/src/main</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src/main</directory>
+                  <includes>
+                    <include>/data/**</include>
+                    <include>/resources/**</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>copy-scripts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/build</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/src/main</directory>
+                  <includes>
+                    <include>/*.bat</include>
+                    <include>/*.sh</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
 </project>
