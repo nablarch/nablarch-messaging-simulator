@@ -28,8 +28,6 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Test;
 
-import please.change.me.simulator.common.concurrent.ConcurrentLazyCache;
-
 /**
  * {@link MessageReadSupport}のテストクラス。
  *

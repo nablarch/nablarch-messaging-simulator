@@ -14,7 +14,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import please.change.me.simulator.common.DummyMessagingContext;
-import please.change.me.simulator.outgoing.action.OutgoingSimulatorAction;
 
 import java.nio.charset.Charset;
 import java.util.HashMap;
